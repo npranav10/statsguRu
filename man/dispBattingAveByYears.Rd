@@ -7,7 +7,7 @@
 dispBattingAveByYears(data)
 }
 \arguments{
-\item{dataframe}{Output of splitBattingSummary.}
+\item{data}{Output of splitBattingSummary.}
 }
 \value{
 Plots a player's year-wise batting average.
@@ -16,5 +16,7 @@ Plots a player's year-wise batting average.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's year-wise batting average.
 }
 \examples{
-dispBattingAveByContinent(dataframe)
+sachin = getBattingSummary(35320,11)
+sachin1 = splitBattingSummary(sachin)
+dispBattingAveByYears(sachin1)
 }

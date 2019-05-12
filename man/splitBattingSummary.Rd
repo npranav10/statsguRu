@@ -4,10 +4,10 @@
 \alias{splitBattingSummary}
 \title{Splits Batting Summary data into different categories}
 \usage{
-splitBattingSummary(dataframe)
+splitBattingSummary(data)
 }
 \arguments{
-\item{dataframe}{Output of getBattingSummary().}
+\item{data}{Output of getBattingSummary().}
 }
 \value{
 Returns a list comprising data segregated into different categories of Batting Summary statistics
@@ -16,5 +16,6 @@ Returns a list comprising data segregated into different categories of Batting S
 This function takes in "Batting Summary" dataframe  and returns a list comprising data segregated into different categories that can inferred from a Players's Batting Summary.
 }
 \examples{
-splitBattingSummary(dataframe)
+sachin = getBattingSummary(35320,11)
+sachin1 = splitBattingSummary(sachin)
 }

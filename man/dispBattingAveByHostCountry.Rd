@@ -7,7 +7,7 @@
 dispBattingAveByHostCountry(data)
 }
 \arguments{
-\item{dataframe}{Output of splitBattingSummary.}
+\item{data}{Output of splitBattingSummary.}
 }
 \value{
 Plots a player's batting average in Every host Country.
@@ -16,5 +16,7 @@ Plots a player's batting average in Every host Country.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's batting average in every host opposition team.
 }
 \examples{
-dispBattingAveByCountry(dataframe)
+sachin = getBattingSummary(35320,11)
+sachin1 = splitBattingSummary(sachin)
+dispBattingAveByHostCountry(sachin1)
 }

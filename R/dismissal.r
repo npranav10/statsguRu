@@ -48,7 +48,7 @@ splitDismissalSummary = function(dataframe){
 #' Plots a pie chart of Dismissal Summary vs type and style of Bowlers
 #'
 #' This function takes in "Dismissal Summary" dataframe after splitDismissalSummary  and Plots a pie chart of Dismissal Summary vs type and style of Bowlers.
-#' @param dataframe Output of splitDismissalSummary().
+#' @param data Output of splitDismissalSummary().
 #' @return Plots a pie chart of Dismissal Summary vs type and style of Bowlers
 #' @export
 #' @examples
@@ -63,6 +63,6 @@ dispBatsmanDismissalsByBowlerType =function(data)
   l = round(100*x/sum(x), 1)
   l = paste(l,"%",sep = "")
   pie3D(x,labels = l,radius = 1,main="Distribution of Dismissals",mar = c(1,1,1,16));
-  legend("topright", as.vector(data$Grouping), cex = 1,fill = rainbow(length(data$Dis)),xpd = TRUE,inset=c(-0.65,-0.05));
+  legend("topright", as.vector(data$Grouping), cex = 1,fill = rainbow(length(data$Dis)),xpd = TRUE,inset=c(-0.55,-0.05));
 
 }

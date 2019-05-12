@@ -7,7 +7,7 @@
 dispBattingAveByPosPlayed(data)
 }
 \arguments{
-\item{dataframe}{Output of splitBattingSummary.}
+\item{data}{Output of splitBattingSummary.}
 }
 \value{
 Plots a player's batting position-wise batting average.
@@ -17,6 +17,6 @@ This function takes in "Batting Summary" dataframe modified after splitBattingSu
 }
 \examples{
 sachin = getBattingSummary(35320,11)
-sachin1 = splitBattingSummary(sachin1)
+sachin1 = splitBattingSummary(sachin)
 dispBattingAveByPosPlayed(sachin1)
 }

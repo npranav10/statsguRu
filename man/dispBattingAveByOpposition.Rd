@@ -7,7 +7,7 @@
 dispBattingAveByOpposition(data)
 }
 \arguments{
-\item{dataframe}{Output of splitBattingSummary.}
+\item{data}{Output of splitBattingSummary.}
 }
 \value{
 Plots a player's batting average against every opposition team.
@@ -16,5 +16,7 @@ Plots a player's batting average against every opposition team.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's batting average against every opposition team.
 }
 \examples{
-dispBattingAveByOpposition(dataframe)
+sachin = getBattingSummary(35320,11)
+sachin1 = splitBattingSummary(sachin)
+dispBattingAveByOpposition(sachin1)
 }

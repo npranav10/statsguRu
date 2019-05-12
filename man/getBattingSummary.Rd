@@ -12,11 +12,11 @@ getBattingSummary(PlayerID, MatchType)
 \item{MatchType}{Type of Match Played (1 for Test; 2 for ODI; 3 for T20I ; 11 for All)}
 }
 \value{
-Returns DataFrame containing complete Batting Summary of a Player
+Returns dataframe containing complete Batting Summary of a Player
 }
 \description{
 This function scraps batting summary info from Statsguru and returns a dataframe
 }
 \examples{
-getBattingSummary(35320,11)
+sachin = getBattingSummary(35320,11)
 }

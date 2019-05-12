@@ -7,7 +7,7 @@
 dispBatsmanDismissalsByBowlerType(data)
 }
 \arguments{
-\item{dataframe}{Output of splitDismissalSummary().}
+\item{data}{Output of splitDismissalSummary().}
 }
 \value{
 Plots a pie chart of Dismissal Summary vs type and style of Bowlers
