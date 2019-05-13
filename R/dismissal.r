@@ -62,7 +62,7 @@ dispBatsmanDismissalsByBowlerType =function(data)
   x = as.numeric(data$Dis)
   l = round(100*x/sum(x), 1)
   l = paste(l,"%",sep = "")
-  pie3D(x,labels = l,radius = 1,main="Distribution of Dismissals vs Bowlers",mar = c(1,1,4,10));
+  pie3D(x,labels = l,radius = 1,main="Distribution of Dismissals vs Bowlers",mar = c(1,4,4,10));
   legend("topright", as.vector(data$Grouping), cex = 1,fill = rainbow(length(data$Dis)),xpd = TRUE,inset=c(-0.55,-0.05));
 
 }
