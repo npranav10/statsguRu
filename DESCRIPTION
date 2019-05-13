@@ -4,7 +4,7 @@ Title: Extract and Visualize Cricket Statistics from ESPNCricinfo's Statsguru
 Version: 0.1.0
 Author: Pranav Nagarajan
 Maintainer: Pranav Nagarajan <npranav10@gmail.com>
-Description: Use this Package to extract data from ESPNCricinfo's Statsguru and perform interesting functions to gather more insights from the extracted data.
+Description: Use this Package to extract data from ESPNCricinfo's Statsguru and perform interesting functions to gather insights from the extracted data.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
