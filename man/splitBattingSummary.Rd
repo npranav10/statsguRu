@@ -4,10 +4,12 @@
 \alias{splitBattingSummary}
 \title{Splits Batting Summary data into different categories}
 \usage{
-splitBattingSummary(data)
+splitBattingSummary(data, MatchType)
 }
 \arguments{
 \item{data}{Output of getBattingSummary().}
+
+\item{MatchType}{Type of Match Played (1 for Test; 2 for ODI; 3 for T20I ; 11 for All)}
 }
 \value{
 Returns a list comprising data segregated into different categories of Batting Summary statistics
@@ -16,6 +18,10 @@ Returns a list comprising data segregated into different categories of Batting S
 This function takes in "Batting Summary" dataframe  and returns a list comprising data segregated into different categories that can inferred from a Players's Batting Summary.
 }
 \examples{
-sachin = getBattingSummary(35320,11)
-sachin1 = splitBattingSummary(sachin)
+sachin = getBattingSummary(35320,1)
+sachin1 = splitBattingSummary(sachin,1)
+dhoni = getBattingSummary(28081,2)
+dhoni1 = splitBattingSummary(dhoni,2)
+kohli = getBattingSummary(253802,3)
+kohli1 = splitBattingSummary(kohli,3)
 }

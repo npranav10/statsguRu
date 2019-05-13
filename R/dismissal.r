@@ -62,7 +62,35 @@ dispBatsmanDismissalsByBowlerType =function(data)
   x = as.numeric(data$Dis)
   l = round(100*x/sum(x), 1)
   l = paste(l,"%",sep = "")
-  pie3D(x,labels = l,radius = 1,main="Distribution of Dismissals",mar = c(1,1,1,16));
+  pie3D(x,labels = l,radius = 1,main="Distribution of Dismissals vs Bowlers",mar = c(1,1,4,10));
+  legend("topright", as.vector(data$Grouping), cex = 1,fill = rainbow(length(data$Dis)),xpd = TRUE,inset=c(-0.55,-0.05));
+
+}
+
+###################################################################################################################################
+
+#' Plots a pie chart of Dismissal Summary of a Player
+#'
+#' This function takes in "Dismissal Summary" dataframe after splitDismissalSummary  and plots the Dismissal Summary of a Player as a pie chart.
+#' @param data Output of splitDismissalSummary().
+#' @return Plots a pie chart of Dismissal Summary of a player.
+#' @export
+#' @examples
+#' sachin = getDismissalSummary(35320,11)
+#' sachin1 = splitDismissalSummary(sachin)
+#' dispBatsmanDismissals(sachin1)
+
+dispBatsmanDismissals =function(data)
+{
+  data= cbind(0,data$dismissalType)
+  for(i in 1:nrow(data))
+  {
+    data$'0'[i] =sum(as.numeric(data[i,5:13]))
+  }
+  x = data$'0'
+  l = round(100*x/sum(x), 1)
+  l = paste(l,"%",sep = "")
+  pie3D(x,labels = l,radius = 1,main="Distribution of Dismissals",mar = c(1,4,4,10));
   legend("topright", as.vector(data$Grouping), cex = 1,fill = rainbow(length(data$Dis)),xpd = TRUE,inset=c(-0.55,-0.05));
 
 }
