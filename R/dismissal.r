@@ -82,10 +82,13 @@ dispBatsmanDismissalsByBowlerType =function(data)
 
 dispBatsmanDismissals =function(data)
 {
-  data= cbind(0,data$dismissalType)
+  data= cbind(data$dismissalType,0)
   for(i in 1:nrow(data))
   {
-    data$'0'[i] =sum(as.numeric(data[i,5:13]))
+    if(colnames(data[2])=="Span")
+      data$'0'[i] =sum(as.numeric(data[i,4:12]))
+    else
+      data$'0'[i] =sum(as.numeric(data[i,3:11]))
   }
   x = data$'0'
   l = round(100*x/sum(x), 1)
