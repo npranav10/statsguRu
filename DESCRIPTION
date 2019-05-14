@@ -8,5 +8,5 @@ Description: Use this Package to extract data from ESPNCricinfo's Statsguru and 
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Depends: htmltab,plotrix,devtools,fs,shinydashboard
+Depends: htmltab,plotrix,devtools,fs
 RoxygenNote: 6.1.1

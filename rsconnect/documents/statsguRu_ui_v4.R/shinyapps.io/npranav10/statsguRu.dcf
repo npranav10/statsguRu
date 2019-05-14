@@ -1,0 +1,13 @@
+name: statsguRu
+title: statsguRu
+username:
+account: npranav10
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 925071
+bundleId: 2083301
+url: https://npranav10.shinyapps.io/statsguRu/
+when: 1557845075.24119
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .Rbuildignore|.RData|DESCRIPTION|LICENSE|NAMESPACE|README.md|statsguRu_ui_v2.R|statsguRu_ui_v3.R|R/batting.R|R/dismissal.r|man
