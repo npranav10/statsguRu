@@ -16,7 +16,7 @@ Plots a player's batting average in every contient.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's batting average in every contitent.
 }
 \examples{
-sachin = getBattingSummary(35320,11)
-sachin1 = splitBattingSummary(sachin)
+sachin = getBattingSummary(35320,1)
+sachin1 = splitBattingSummary(sachin,1)
 dispBattingAveByContinent(sachin1)
 }

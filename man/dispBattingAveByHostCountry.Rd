@@ -17,6 +17,6 @@ This function takes in "Batting Summary" dataframe modified after splitBattingSu
 }
 \examples{
 sachin = getBattingSummary(35320,11)
-sachin1 = splitBattingSummary(sachin)
+sachin1 = splitBattingSummary(sachin,11)
 dispBattingAveByHostCountry(sachin1)
 }

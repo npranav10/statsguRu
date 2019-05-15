@@ -110,8 +110,8 @@ splitBattingSummary = function(data,MatchType){
 #' @return Plots a player's batting average against every opposition team.
 #' @export
 #' @examples
-#' sachin = getBattingSummary(35320,11)
-#' sachin1 = splitBattingSummary(sachin)
+#' sachin = getBattingSummary(35320,2)
+#' sachin1 = splitBattingSummary(sachin,2)
 #' dispBattingAveByOpposition(sachin1)
 
 dispBattingAveByOpposition = function(data){
@@ -131,7 +131,7 @@ dispBattingAveByOpposition = function(data){
 #' @export
 #' @examples
 #' sachin = getBattingSummary(35320,11)
-#' sachin1 = splitBattingSummary(sachin)
+#' sachin1 = splitBattingSummary(sachin,11)
 #' dispBattingAveByHostCountry(sachin1)
 
 dispBattingAveByHostCountry = function(data){
@@ -165,8 +165,8 @@ dispBattingAveByHostCountry = function(data){
 #' @return Plots a player's batting average in every contient.
 #' @export
 #' @examples
-#' sachin = getBattingSummary(35320,11)
-#' sachin1 = splitBattingSummary(sachin)
+#' sachin = getBattingSummary(35320,1)
+#' sachin1 = splitBattingSummary(sachin,1)
 #' dispBattingAveByContinent(sachin1)
 
 dispBattingAveByContinent = function(data){
@@ -185,7 +185,7 @@ dispBattingAveByContinent = function(data){
 #' @export
 #' @examples
 #' sachin = getBattingSummary(35320,11)
-#' sachin1 = splitBattingSummary(sachin)
+#' sachin1 = splitBattingSummary(sachin,11)
 #' dispBattingAveByYears(sachin1)
 
 dispBattingAveByYears = function(data){
@@ -202,8 +202,8 @@ dispBattingAveByYears = function(data){
 #' @return Plots a player's batting position-wise batting average.
 #' @export
 #' @examples
-#' sachin = getBattingSummary(35320,11)
-#' sachin1 = splitBattingSummary(sachin)
+#' sachin = getBattingSummary(35320,2)
+#' sachin1 = splitBattingSummary(sachin,2)
 #' dispBattingAveByPosPlayed(sachin1)
 
 dispBattingAveByPosPlayed = function(data){
