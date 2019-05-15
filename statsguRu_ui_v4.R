@@ -65,8 +65,8 @@ ui <- fluidPage(
         navbarPage(
           "Tabs",
           tabPanel(
-            "How to Use !",
-
+            "Home",
+            column(width = 12,h1("Visualize Performance of Cricketers using this Dashboard!")),
             column(
               width = 4,h3(strong("ESPNcricinfo Player ID")),
               numericInput(
@@ -97,11 +97,11 @@ ui <- fluidPage(
                      tags$ol(
                        tags$li(
                          h3(
-                           "Grab the ESPNCricinfo Player ID of the player, you would like to analyze.
-                           Some of the sample IDs are on the right!"
+                           "Grab the ESPNCricinfo Player ID of the player, you would like to analyze."
+
                          )
                          ),
-                       tags$li(h3("Paste the ID in text box.")),
+                       tags$li(h3("Paste the ID in input box.")),
                        tags$li(h3(
                          "Select a Match Format from the given options"
                        )),
@@ -112,7 +112,7 @@ ui <- fluidPage(
                        )
                          ),
                        tags$li(h3(
-                         "Switch Between the 3 tabs and have a look at the Stats in colour."
+                         "Switch Between the 3 tabs and have a colourful experience in interpreting the Stats."
                        ))
 
                        )
@@ -131,6 +131,27 @@ ui <- fluidPage(
                 tags$li(h3("Babar Azam: 348144")),
                 tags$li(h3("Vijay Shankar: 477021"))
               )
+            ),
+            column(
+              width = 12,
+              h3(strong("Upcoming Topics:")),
+              tags$ul(
+                tags$li(h3(
+                  "Batsman vs Bowler Match-Ups. Yeah Why not?"
+                )),
+                tags$li(h3(
+                  "Dismissals in Batting Runs Interval"
+                )),
+                tags$li(h3(
+                  "Impact of Toss decision on Batting"
+                )),
+                tags$li(
+                  h3("Batting Performance in Major Tournaments")
+                ),
+                tags$li(
+                  h3("Batting Performance in Major Grounds")
+                ),
+                tags$li(h3("...")))
             ),
             column(width = 12,h3("Warning! Still in Beta Version (v 0.4.0)"),
               h3(strong("Some Bugs:    ")),
@@ -196,24 +217,8 @@ ui <- fluidPage(
                 collapsible = TRUE,
                 solidHeader = TRUE,
                 title = "Batting Dismissal Summary vs Bowler Type"
-              ),
-              column(
-                width = 12,
-                h1("Upcoming Topics"),
-                tags$ul(tags$li(h3(
-                  "Dismissals in Batting Runs Interval"
-                )),
-                tags$li(h3(
-                  "Impact of Toss decision on Batting"
-                )),
-                tags$li(
-                  h3("Batting Performance in Major Tournaments")
-                ),
-                tags$li(
-                  h3("Batting Performance in Major Grounds")
-                ),
-                tags$li(h3("...")))
               )
+
             )
           ),
           tabPanel("Bowling Statistics", h1("Coming Soon! Keep Checking the tab")),
@@ -228,7 +233,7 @@ ui <- fluidPage(
                        <h3>Pranav Nagarajan</h3>
                        <h3>Contact : npranav10@gmail.com</h3>
                        <h3>GitHub : <a href='https://github.com/npranav10'>https://github.com/npranav10</a></h3>
-                       <h3>LinkedIn : <a href='in.linkedin.com/in/npranav'>in.linkedin.com/in/npranav</a></h3>
+                       <h3>LinkedIn : <a href='in.linkedin.com/in/npranav'>https://www.linkedin.com/in/npranav</a></h3>
                        <h1><strong>Package Used:</strong><h1>
                        <h3>statsguRu</h3>
                        <h1><strong>Package Author:</strong><h1>
