@@ -16,7 +16,7 @@ getDismissalSummary = function(PlayerID,MatchType){
 ###################################################################################################################################
 #' Splits Dismissal Summary data into respective categories
 #'
-#' This function takes in "Dismissal Summary" dataframe  and returns a list comprising data segregated into different dismissal categories.
+#' This function takes in output dataframe of getDismissalSummary and returns a list comprising data segregated into different dismissal categories.
 #' @param dataframe Output of getDismissalSummary().
 #' @return Returns a list comprising data segregated into different dismissal categories
 #' @export
@@ -47,7 +47,7 @@ splitDismissalSummary = function(dataframe){
 
 #' Plots a pie chart of Dismissal Summary vs type and style of Bowlers
 #'
-#' This function takes in "Dismissal Summary" dataframe after splitDismissalSummary  and Plots a pie chart of Dismissal Summary vs type and style of Bowlers.
+#' This function takes in output of splitDismissalSummary  and Plots a pie chart of Dismissal Summary vs type and style of Bowlers.
 #' @param data Output of splitDismissalSummary().
 #' @return Plots a pie chart of Dismissal Summary vs type and style of Bowlers
 #' @export
@@ -71,7 +71,7 @@ dispBatsmanDismissalsByBowlerType =function(data)
 
 #' Plots a pie chart of Dismissal Summary of a Player
 #'
-#' This function takes in "Dismissal Summary" dataframe after splitDismissalSummary  and plots the Dismissal Summary of a Player as a pie chart.
+#' This function takes in output of splitDismissalSummary and plots the Dismissal Summary of a Player as a pie chart.
 #' @param data Output of splitDismissalSummary().
 #' @return Plots a pie chart of Dismissal Summary of a player.
 #' @export
@@ -97,3 +97,4 @@ dispBatsmanDismissals =function(data)
   legend("topright", as.vector(data$Grouping), cex = 1,fill = rainbow(length(data$Dis)),xpd = TRUE,inset=c(-0.55,-0.05));
 
 }
+

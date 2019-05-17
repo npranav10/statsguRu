@@ -13,7 +13,7 @@ splitDismissalSummary(dataframe)
 Returns a list comprising data segregated into different dismissal categories
 }
 \description{
-This function takes in "Dismissal Summary" dataframe  and returns a list comprising data segregated into different dismissal categories.
+This function takes in output dataframe of getDismissalSummary and returns a list comprising data segregated into different dismissal categories.
 }
 \examples{
 sachin = getDismissalSummary(35320,11)

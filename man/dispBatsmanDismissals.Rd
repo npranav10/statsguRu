@@ -13,7 +13,7 @@ dispBatsmanDismissals(data)
 Plots a pie chart of Dismissal Summary of a player.
 }
 \description{
-This function takes in "Dismissal Summary" dataframe after splitDismissalSummary  and plots the Dismissal Summary of a Player as a pie chart.
+This function takes in output of splitDismissalSummary and plots the Dismissal Summary of a Player as a pie chart.
 }
 \examples{
 sachin = getDismissalSummary(35320,11)
