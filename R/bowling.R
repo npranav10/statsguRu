@@ -165,9 +165,15 @@ dispWktsTakenAtHostCountry = function(data){
 dispBowlingAveByYears = function(data){
   data = data$yearWise
   data$Grouping <- as.integer(gsub('[a-zA-Z]', '', data$Grouping))
-  plot(data$Grouping,data$Ave, type="b", col="purple", lwd=5, pch=15, xlab="Year",ylab="Bowling Average", xaxt='n')
+  data$Ave = round(as.numeric(data$Ave),1)
+  if(names(data[2])=="Span")
+  {
+    data = data[-2]
+  }
+  data = na.omit(data)
+  p = plot(data$Grouping,data$Ave, type="b", col="purple", lwd=2, pch=15,ylim = c(min(data$Ave)-10,max(data$Ave)+10) ,xlab="Year",ylab="Bowling Average", xaxt='n')
   axis(1,data$Grouping,data$Grouping)
-  text(data$Ave,data$Grouping, cex=0.6, pos=4, col="red")
+  text(data$Grouping,data$Ave,as.integer(data$Ave), cex=1.1, pos=3, col="red")
   title("Year Wise Bowling Average")
 
 }
@@ -187,10 +193,16 @@ dispBowlingAveByYears = function(data){
 
 dispBowlingERByYears = function(data){
   data = data$yearWise
+  data$Econ = round(as.numeric(data$Econ),1)
+  if(names(data[2])=="Span")
+  {
+    data = data[-2]
+  }
+  data = na.omit(data)
   data$Grouping <- as.integer(gsub('[a-zA-Z]', '', data$Grouping))
-  plot(data$Grouping,data$Econ, type="b", col="orange", lwd=5, pch=15, xlab="Year",ylab="Bowling Economy Rate", xaxt='n')
+  plot(data$Grouping,data$Econ, type="b", col="orange", lwd=2, pch=19,ylim = c(min(data$Econ)-1,max(data$Econ)+1) ,xlab="Year",ylab="Bowling Economy Rate", xaxt='n')
   axis(1,data$Grouping,data$Grouping)
-  text(data$Econ,data$Grouping, cex=0.6, pos=4, col="red")
+  text(data$Grouping,as.numeric(data$Econ),data$Econ,cex=1.2, pos=3, col="brown")
   title("Year Wise Bowling Economy Rate")
 
 }
@@ -225,3 +237,4 @@ dispBowlingAveEconByOpposition = function(data){
 
 }
 ###################################################################################################################################
+

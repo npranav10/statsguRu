@@ -216,7 +216,15 @@ dispBattingAveByContinent = function(data){
 
 dispBattingAveByYears = function(data){
   data = data$yearWise
-  barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average by Calendar Year")
+  data$Ave = round(as.numeric(data$Ave),1)
+  data$Grouping <- as.integer(gsub('[a-zA-Z]', '', data$Grouping))
+  data = data[-2]
+  data = na.omit(data)
+  plot(data$Grouping,data$Ave, type="b", col="orange", lwd=2, pch=19,ylim = c(min(data$Ave)-10,max(data$Ave)+10) ,xlab="Year",ylab="Batting Average", xaxt='n')
+  axis(1,data$Grouping,data$Grouping)
+  text(data$Grouping,data$Ave,as.integer(data$Ave),cex=1.2, pos=3, col="brown")
+  title("Year Wise Batting Average")
+
 }
 
 
@@ -258,6 +266,8 @@ dispBattingAveByPosPlayed = function(data){
 dispBattingAveSRByOpposition = function(data){
 
   data = data$oppCountry
+  if("SR" %in% colnames(data))
+  {
   data$Ave = as.numeric(data$Ave)
   data$SR = as.numeric(data$SR)
   data = na.omit(data)
@@ -269,7 +279,9 @@ dispBattingAveSRByOpposition = function(data){
           box.padding = unit(0.5, "lines")) +geom_point(colour = "black", size = 3) +
     labs(x = "Batting Average",y= "Strike Rate",title = "Average vs Strike Rate") + theme(plot.title = element_text(hjust = 0.5))
   sp + geom_hline(yintercept=mean(data$SR),linetype="dashed", color = "blue") + geom_vline(xintercept=mean(data$Ave),linetype="dashed", color = "orange")
-
+  }
+  else
+  {print("Strike Rate Data Not Availabe for this Player")}
 
 }
 ###################################################################################################################################
