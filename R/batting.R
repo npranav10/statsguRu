@@ -135,7 +135,8 @@ dispBattingAveByOpposition = function(data){
   data = data$oppCountry
   data$Ave = as.numeric(data$Ave)
   data = na.omit(data)
-  barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average vs Opp Country")
+  bp = barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average vs Opp Country")
+  text(bp,0,as.integer(data$Ave),cex=1,pos=3)
   }
 
 
@@ -156,8 +157,8 @@ dispBattingAveByHostCountry = function(data){
   data = data$hostCountry
   data$Ave = as.numeric(data$Ave)
   data = na.omit(data)
-  barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average in Host Country")
-
+  bp = barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average in Host Country")
+  text(bp,0,as.integer(data$Ave),cex=1,pos=3)
 
   #abline(h=c$Ave,lwd=2, lty="dashed", col="red")
   #text(0.5, as.integer(c$Ave)+2, "Average", col = "black")
@@ -197,8 +198,9 @@ dispBattingAveByContinent = function(data){
   data = data$hostContinent
   data$Ave = as.numeric(data$Ave)
   data = na.omit(data)
-  barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average by Continent")
-}
+  bp = barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average by Continent")
+  text(bp,0,as.integer(data$Ave),cex=1,pos=3)
+  }
 
 
 ###################################################################################################################################
@@ -244,8 +246,9 @@ dispBattingAveByPosPlayed = function(data){
   data = data$posPlayed
   data$Ave = as.numeric(data$Ave)
   data = na.omit(data)
-  barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average by Position Played")
-}
+  bp = barplot(as.numeric(data$Ave),names = as.vector(data$Grouping),las =2,cex.names = 0.9,col = rainbow(length(data$Ave)),main="Batting Average by Position Played")
+  text(bp,0,as.integer(data$Ave),cex=1,pos=3)
+  }
 
 
 ###################################################################################################################################
