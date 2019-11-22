@@ -41,7 +41,7 @@ splitWicketsSummary = function(data,MatchType){
       a=append(a,i)
     }
   }
-  if(MatchType==1 || MatchType==2 || MatchType==3)
+  if((MatchType==1) || (MatchType==2) || (MatchType==3))
   {
 
     batsmanType=data[1:a[1]-1,]
@@ -66,8 +66,8 @@ splitWicketsSummary = function(data,MatchType){
 #' @return Plots a pie chart of Dismissal Type Summary of a Bowler.
 #' @export
 #' @examples
-#' sachin = getWicketsSummary(35320,11)
-#' sachin1 = splitWicketsSummary(sachin)
+#' sachin = getWicketsSummary(35320,1)
+#' sachin1 = splitWicketsSummary(sachin,1)
 #' dispBowlerDismissals(sachin1)
 
 dispBowlerDismissals =function(data)

@@ -109,7 +109,7 @@ splitBowlingSummary = function(data,MatchType){
 #' @export
 #' @examples
 #' sachin = getBowlingSummary(35320,2)
-#' sachin1 = getBowlingSummary(sachin,2)
+#' sachin1 = splitBowlingSummary(sachin,2)
 #' dispWktsTakenByOpposition(sachin1)
 
 dispWktsTakenByOpposition = function(data){
@@ -135,7 +135,7 @@ dispWktsTakenByOpposition = function(data){
 #' @export
 #' @examples
 #' sachin = getBowlingSummary(35320,2)
-#' sachin1 = getBowlingSummary(sachin,2)
+#' sachin1 = splitBowlingSummary(sachin,2)
 #' dispWktsTakenAtHostCountry(sachin1)
 
 dispWktsTakenAtHostCountry = function(data){
