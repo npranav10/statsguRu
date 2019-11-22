@@ -13,7 +13,7 @@ dispBatsmanDismissalsByBowlerType(data)
 Plots a pie chart of Dismissal Summary vs type and style of Bowlers
 }
 \description{
-This function takes in "Dismissal Summary" dataframe after splitDismissalSummary  and Plots a pie chart of Dismissal Summary vs type and style of Bowlers.
+This function takes in output of splitDismissalSummary  and Plots a pie chart of Dismissal Summary vs type and style of Bowlers.
 }
 \examples{
 sachin = getDismissalSummary(35320,11)

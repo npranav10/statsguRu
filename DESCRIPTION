@@ -1,12 +1,13 @@
-Package: statsguRu
 Type: Package
-Title: Extract and Visualize Cricket Statistics 
+Package: statsguRu
 Version: 0.1.0
-Author: Pranav N
-Maintainer: Pranav N <npranav10@gmail.com>
-Description: Use this Package to extract data from ESPNCricinfo's Statsguru and perform interesting functions to gather more insights from the extracted data.
-License: GPL-2
+Title: Extract, Visualize and Analyze Cricket Statistics from ESPNCricinfo's Statsguru
+Description: Use this package to scrap Test Matches, One Day Internationals, Twenty-20 Internationals data of a player from ESPNCricinfo's Statsguru (<http://stats.espncricinfo.com/ci/engine/stats/index.html>) and then visualize their batting, bowling and fielding performances in the form of charts and graphs.
+Author: Pranav Nagarajan
+Maintainer: Pranav Nagarajan <npranav10@gmail.com>
+URL: https://github.com/npranav10/statsguRu
+BugReports: https://github.com/npranav10/statsguRu/issues
+License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
-Depends: htmltab,plotrix,devtools,fs,shinydashboard
+Depends: htmltab,plotrix,devtools,grDevices,graphics,utils,ggplot2,ggrepel
 RoxygenNote: 6.1.1
