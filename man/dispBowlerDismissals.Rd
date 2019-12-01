@@ -16,7 +16,7 @@ Plots a pie chart of Dismissal Type Summary of a Bowler.
 This function takes in output of splitDismissalSummary and plots the Dismissal Type Summary of a Bowler as a pie chart.
 }
 \examples{
-sachin = getWicketsSummary(35320,11)
-sachin1 = splitWicketsSummary(sachin)
+sachin = getWicketsSummary(35320,1)
+sachin1 = splitWicketsSummary(sachin,1)
 dispBowlerDismissals(sachin1)
 }

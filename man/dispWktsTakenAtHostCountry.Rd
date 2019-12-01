@@ -17,6 +17,6 @@ This function takes in "Bowling Summary" dataframe modified after splitBowlingSu
 }
 \examples{
 sachin = getBowlingSummary(35320,2)
-sachin1 = getBowlingSummary(sachin,2)
+sachin1 = splitBowlingSummary(sachin,2)
 dispWktsTakenAtHostCountry(sachin1)
 }
