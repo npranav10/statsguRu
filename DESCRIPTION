@@ -9,5 +9,6 @@ URL: https://github.com/npranav10/statsguRu
 BugReports: https://github.com/npranav10/statsguRu/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
-Depends: htmltab,plotrix,devtools,grDevices,graphics,utils,ggplot2,ggrepel
-RoxygenNote: 7.0.0
+Depends: plotrix,devtools,grDevices,graphics,utils,ggplot2,ggrepel
+Suggests: htmltab
+RoxygenNote: 7.1.1

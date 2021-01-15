@@ -11,7 +11,7 @@
 
 getBowlingSummary = function(PlayerID,MatchType){
   url = paste("http://stats.espncricinfo.com/ci/engine/player/",PlayerID,".html?class=",MatchType,";template=results;type=bowling",sep="");
-  htmltab(url,which = 4,rm_nodata_rows = FALSE)
+  htmltab::htmltab(url,which = 4,rm_nodata_rows = FALSE)
 }
 
 

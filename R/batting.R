@@ -11,7 +11,7 @@
 
 getOverallBattingSummary = function(PlayerID,MatchType){
   url = paste("http://stats.espncricinfo.com/ci/engine/player/",PlayerID,".html?class=",MatchType,";template=results;type=batting",sep="");
-  htmltab(url,which = 3,rm_nodata_rows = FALSE)
+  htmltab::htmltab(url,which = 3,rm_nodata_rows = FALSE)
 }
 
 ###################################################################################################################################
@@ -27,7 +27,7 @@ getOverallBattingSummary = function(PlayerID,MatchType){
 
 getBattingSummary = function(PlayerID,MatchType){
   url = paste("http://stats.espncricinfo.com/ci/engine/player/",PlayerID,".html?class=",MatchType,";template=results;type=batting",sep="");
-  htmltab(url,which = 4,rm_nodata_rows = FALSE)
+  htmltab::htmltab(url,which = 4,rm_nodata_rows = FALSE)
 }
 
 
