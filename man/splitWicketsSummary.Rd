@@ -20,8 +20,4 @@ This function takes in "Wickets Summary" dataframe  and returns a list comprisin
 \examples{
 sachin = getWicketsSummary(35320,1)
 sachin1 = splitWicketsSummary(sachin,1)
-dhoni = getWicketsSummary(28081,2)
-dhoni1 = splitWicketsSummary(dhoni,2)
-kohli = getWicketsSummary(253802,3)
-kohli1 = splitWicketsSummary(kohli,3)
 }

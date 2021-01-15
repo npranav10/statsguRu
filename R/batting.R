@@ -43,10 +43,6 @@ getBattingSummary = function(PlayerID,MatchType){
 #' @examples
 #' sachin = getBattingSummary(35320,1)
 #' sachin1 = splitBattingSummary(sachin,1)
-#' dhoni = getBattingSummary(28081,2)
-#' dhoni1 = splitBattingSummary(dhoni,2)
-#' kohli = getBattingSummary(253802,3)
-#' kohli1 = splitBattingSummary(kohli,3)
 
 splitBattingSummary = function(data,MatchType){
   a=c();

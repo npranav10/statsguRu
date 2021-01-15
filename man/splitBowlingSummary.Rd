@@ -20,8 +20,4 @@ This function takes in "Bowling Summary" dataframe  and returns a list comprisin
 \examples{
 sachin = getBowlingSummary(35320,1)
 sachin1 = splitBowlingSummary(sachin,1)
-dhoni = getBowlingSummary(28081,2)
-dhoni1 = splitBowlingSummary(dhoni,2)
-kohli = getBowlingSummary(253802,3)
-kohli1 = splitBowlingSummary(kohli,3)
 }
