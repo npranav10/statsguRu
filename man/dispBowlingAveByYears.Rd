@@ -4,10 +4,10 @@
 \alias{dispBowlingAveByYears}
 \title{Displays Barplot of Players's Year-wise Bowling Average}
 \usage{
-dispBowlingAveByYears(data)
+dispBowlingAveByYears(data, plot_title = "Year Wise Bowling Average")
 }
 \arguments{
-\item{data}{Output of splitBowlingSummary.}
+\item{data}{Output of statsguRu::split_Summary_Bowling()}
 }
 \value{
 Plots a player's year-wise Bowling Average.
@@ -16,7 +16,8 @@ Plots a player's year-wise Bowling Average.
 This function takes in "Batting Summary" dataframe modified after splitBowlingSummary and plots a player's Year-wise Bowling Average.
 }
 \examples{
-sachin = getBowlingSummary(35320,11)
-sachin1 = splitBowlingSummary(sachin,11)
-dispBowlingAveByYears(sachin1)
+ashwin_BowlingSummary = statsguRu::get_Summary_Bowling(PlayerID = 26421, MatchType = 1)
+ashwin_BowlingSummary = statsguRu::split_Summary_Bowling(data = ashwin_BowlingSummary, MatchType = 1)
+statsguRu::dispBowlingAveByYears(data = ashwin_BowlingSummary)
 }
+\keyword{Bowling}

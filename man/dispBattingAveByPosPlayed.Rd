@@ -4,7 +4,10 @@
 \alias{dispBattingAveByPosPlayed}
 \title{Displays Barplot of Players's Batting according to the Player's Batting Position}
 \usage{
-dispBattingAveByPosPlayed(data)
+dispBattingAveByPosPlayed(
+  data,
+  plot_title = "Batting Average by Position Played"
+)
 }
 \arguments{
 \item{data}{Output of splitBattingSummary.}
@@ -16,7 +19,8 @@ Plots a player's batting position-wise batting average.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's batting position-wise batting average.
 }
 \examples{
-sachin = getBattingSummary(35320,2)
-sachin1 = splitBattingSummary(sachin,2)
-dispBattingAveByPosPlayed(sachin1)
+sachin_BattingSummary = statsguRu::get_Summary_Batting(PlayerID = 35320, MatchType = 2)
+sachin_BattingSummary = statsguRu::split_Summary_Batting(sachin_BattingSummary, MatchType = 2)
+statsguRu::dispBattingAveByPosPlayed(data = sachin_BattingSummary)
 }
+\keyword{Batting}

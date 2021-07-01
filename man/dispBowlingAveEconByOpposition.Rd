@@ -4,10 +4,10 @@
 \alias{dispBowlingAveEconByOpposition}
 \title{Displays Scatterplot of a Players's Bowling Average and Economy Rate by List of Oppostion teams}
 \usage{
-dispBowlingAveEconByOpposition(data)
+dispBowlingAveEconByOpposition(data, plot_title = "Average vs Economy Rate")
 }
 \arguments{
-\item{data}{Output of splitBowlingSummary.}
+\item{data}{Output of statsguRu::split_Summary_Bowling()}
 }
 \value{
 Plots a scatterplot pitting player's Bowling Average and Economy Rate against every opposition team.
@@ -16,7 +16,8 @@ Plots a scatterplot pitting player's Bowling Average and Economy Rate against ev
 This function takes in "Bowling Summary" dataframe modified after splitBowlingSummary and plots a player's Bowling Average and Economy Rate against every opposition team.
 }
 \examples{
-sachin = getBowlingSummary(35320,2)
-sachin1 = splitBowlingSummary(sachin,2)
-dispBowlingAveEconByOpposition(sachin1)
+ashwin_BowlingSummary = statsguRu::get_Summary_Bowling(PlayerID = 26421, MatchType = 1)
+ashwin_BowlingSummary = statsguRu::split_Summary_Bowling(data = ashwin_BowlingSummary, MatchType = 1)
+statsguRu::dispBowlingAveEconByOpposition(data = ashwin_BowlingSummary)
 }
+\keyword{Bowling}

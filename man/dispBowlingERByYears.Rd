@@ -4,10 +4,10 @@
 \alias{dispBowlingERByYears}
 \title{Displays Barplot of Players's Year-wise Bowling Economy Rate}
 \usage{
-dispBowlingERByYears(data)
+dispBowlingERByYears(data, plot_title = "Year Wise Bowling Economy Rate")
 }
 \arguments{
-\item{data}{Output of splitBowlingSummary.}
+\item{data}{Output of statsguRu::split_Summary_Bowling()}
 }
 \value{
 Plots a player's year-wise Bowling Economy Rate
@@ -16,7 +16,8 @@ Plots a player's year-wise Bowling Economy Rate
 This function takes in "Batting Summary" dataframe modified after splitBowlingSummary and plots a player's Year-wise Bowling Economy Rate.
 }
 \examples{
-sachin = getBowlingSummary(35320,11)
-sachin1 = splitBowlingSummary(sachin,11)
-dispBowlingERByYears(sachin1)
+ashwin_BowlingSummary = statsguRu::get_Summary_Bowling(PlayerID = 26421, MatchType = 1)
+ashwin_BowlingSummary = statsguRu::split_Summary_Bowling(data = ashwin_BowlingSummary, MatchType = 1)
+statsguRu::dispBowlingERByYears(data = ashwin_BowlingSummary)
 }
+\keyword{Bowling}

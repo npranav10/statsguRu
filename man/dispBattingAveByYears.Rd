@@ -4,7 +4,7 @@
 \alias{dispBattingAveByYears}
 \title{Displays Barplot of Players's Batting Average Year-wise}
 \usage{
-dispBattingAveByYears(data)
+dispBattingAveByYears(data, plot_title = "Year Wise Batting Average")
 }
 \arguments{
 \item{data}{Output of splitBattingSummary.}
@@ -16,7 +16,8 @@ Plots a player's year-wise batting average.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's year-wise batting average.
 }
 \examples{
-sachin = getBattingSummary(35320,11)
-sachin1 = splitBattingSummary(sachin,11)
-dispBattingAveByYears(sachin1)
+sachin_BattingSummary = statsguRu::get_Summary_Batting(PlayerID = 35320, MatchType = 2)
+sachin_BattingSummary = statsguRu::split_Summary_Batting(sachin_BattingSummary, MatchType = 2)
+statsguRu::dispBattingAveByYears(data = sachin_BattingSummary)
 }
+\keyword{Batting}

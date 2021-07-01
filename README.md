@@ -1,13 +1,9 @@
 # statsguRu
-R Package for Visualising Cricket Statistics
 
-Install the package in R using the following command:
-`install.packages("statsguRu")` or using
-`devtools::install_github("npranav10/statsguRu")`
+R Package for Visualizing Cricket Statistics from ESPNCricinfo's Statsguru database.
 
-You can install devtools using `install.packages("devtools")`
+Install the package in R using the following commands:
 
-Visit the Shiny Application created using this package:
-https://npranav10.shinyapps.io/statsguRu/
+1. `install.packages("devtools")`
 
-(P.S: The App is released in beta version.)
+2. `devtools::install_github("npranav10/statsguRu")`

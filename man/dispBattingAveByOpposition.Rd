@@ -4,10 +4,10 @@
 \alias{dispBattingAveByOpposition}
 \title{Displays Barplot of Players's Batting Average by List of Oppostion teams}
 \usage{
-dispBattingAveByOpposition(data)
+dispBattingAveByOpposition(data, plot_title = "Batting Average vs Opp Country")
 }
 \arguments{
-\item{data}{Output of splitBattingSummary.}
+\item{data}{Output of statsguRu::split_Summary_Batting()}
 }
 \value{
 Plots a player's batting average against every opposition team.
@@ -16,7 +16,8 @@ Plots a player's batting average against every opposition team.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's batting average against every opposition team.
 }
 \examples{
-sachin = getBattingSummary(35320,2)
-sachin1 = splitBattingSummary(sachin,2)
-dispBattingAveByOpposition(sachin1)
+sachin_BattingSummary = statsguRu::get_Summary_Batting(PlayerID = 35320, MatchType = 2)
+sachin_BattingSummary = statsguRu::split_Summary_Batting(sachin_BattingSummary, MatchType = 2)
+statsguRu::dispBattingAveByOpposition(data = sachin_BattingSummary)
 }
+\keyword{Batting}

@@ -4,7 +4,10 @@
 \alias{dispBattingAveByHostCountry}
 \title{Displays Barplot of Players's Batting Average by List of Host Country}
 \usage{
-dispBattingAveByHostCountry(data)
+dispBattingAveByHostCountry(
+  data,
+  plot_title = "Batting Average in Host Country"
+)
 }
 \arguments{
 \item{data}{Output of splitBattingSummary.}
@@ -16,7 +19,8 @@ Plots a player's batting average in Every host Country.
 This function takes in "Batting Summary" dataframe modified after splitBattingSummary and plots a player's batting average in every host opposition team.
 }
 \examples{
-sachin = getBattingSummary(35320,11)
-sachin1 = splitBattingSummary(sachin,11)
-dispBattingAveByHostCountry(sachin1)
+sachin_BattingSummary = statsguRu::get_Summary_Batting(PlayerID = 35320, MatchType = 2)
+sachin_BattingSummary = statsguRu::split_Summary_Batting(sachin_BattingSummary, MatchType = 2)
+statsguRu::dispBattingAveByHostCountry(data = sachin_BattingSummary)
 }
+\keyword{Batting}
